@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.21.0" timestamp="2020-11-27T00:26:48.009">
+<file name="C:\dbLab\src\main\java\com\sapiy\controller\impl\ProducerController.java">
+<violation beginline="4" endline="4" begincolumn="1" endcolumn="60" rule="UnusedImports" ruleset="Best Practices" package="com.sapiy.controller.impl" class="ProducerController" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'com.sapiy.model.DAO.implement.MedicineStorageDaoImpl'
+</violation>
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="46" rule="UnusedImports" ruleset="Best Practices" package="com.sapiy.controller.impl" class="ProducerController" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'com.sapiy.model.entity.MedicineStorage'
+</violation>
+</file>
+<file name="C:\dbLab\src\main\java\com\sapiy\model\entity\Producer.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="49" rule="UnusedImports" ruleset="Best Practices" package="com.sapiy.model.entity" class="Producer" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'org.checkerframework.checker.units.qual.C'
+</violation>
+</file>
+<file name="C:\dbLab\src\main\java\com\sapiy\view\View.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="35" rule="UnusedImports" ruleset="Best Practices" package="com.sapiy.view" class="View" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'com.sapiy.controller.impl'
+</violation>
+<violation beginline="4" endline="4" begincolumn="1" endcolumn="32" rule="UnusedImports" ruleset="Best Practices" package="com.sapiy.view" class="View" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'com.sapiy.model.entity'
+</violation>
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="21" rule="UnusedImports" ruleset="Best Practices" package="com.sapiy.view" class="View" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#unusedimports" priority="4">
+Avoid unused imports such as 'java.util.Set'
+</violation>
+<violation beginline="204" endline="204" begincolumn="17" endcolumn="18" rule="UnusedLocalVariable" ruleset="Best Practices" package="com.sapiy.view" class="View" method="getMedicineStorageInputs" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#unusedlocalvariable" priority="3">
+Avoid unused local variables such as 'id'.
+</violation>
+</file>
+</pmd>
