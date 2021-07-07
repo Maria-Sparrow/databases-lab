@@ -1,0 +1,77 @@
+1)use ships_db;
+select ship, battle, result from outcomes order by ship desc;
+
+2)use ships_db;
+select name from ships where class not like '%go' and class like '%o';
+
+3)USE labor_sql;
+SELECT DISTINCT p1.model, p2.model, p1.speed, p1.ram
+FROM laptop p1, pc p2
+WHERE p1.speed = p2.speed AND p1.ram = p2.ram AND p1.model > p2.model
+
+4) use ships_db;
+SELECT c.country, c.class
+FROM classes c
+WHERE UPPER(c.country) = 'UKRAINE' AND EXISTS (
+SELECT c.country, c.class
+FROM classes c
+WHERE UPPER(c.country) = 'UKRAINE' )
+UNION ALL
+SELECT c.country, c.class
+FROM classes c
+WHERE NOT EXISTS (SELECT c.country, c.class
+FROM classes c
+WHERE UPPER(c.country) = 'UKRAINE' )
+
+5)USE labor_sql;
+select maker
+from product
+group by maker
+having count(distinct type) and
+       (min(type) = 'laptop' or
+       (min(type) = 'printer'))
+
+6)use airport_sql;
+SELECT CONCAT("from", town_from , "to", town_to) AS Address
+FROM trip;
+
+7)USE ships_db;
+SELECT name AS shipN, launched AS B
+FROM ships
+where ships.launched<1942
+UNION SELECT outcomes.ship as shipN, year(battles.date) as B
+FROM battles, outcomes
+WHERE battles.date < '1942-01-01 02:32:12'
+
+8)use labor_sql;
+SELECT
+product.maker, AVG(screen)
+FROM laptop
+LEFT JOIN product ON product.model = laptop.model
+GROUP BY product.maker
+
+9)use firm_sql;
+select outcome2.point, outcome2.date,
+case when sum(outcome1.out) > outcome2.out then 'more than once a day'
+when sum(outcome1.out) < outcome2.out or sum(outcome1.out) is null then 'once a day'
+when sum(outcome1.out) = outcome2.out then 'both'
+end as text
+from outcome outcome1 LEFT JOIN outcome_o outcome2
+on outcome1.date = outcome2.date
+group by outcome1.date
+union
+select outcome2.point, outcome2.date,
+case when sum(outcome1.out) > outcome2.out then 'more than once a day'
+when sum(outcome1.out) < outcome2.out or sum(outcome1.out) is null then 'once a day'
+when sum(outcome1.out) = outcome2.out then 'both'
+end as text
+from outcome outcome1 RIGHT JOIN outcome_o outcome2
+on outcome1.date = outcome2.date
+group by outcome1.date
+
+10)use ships_db;
+select name from ships
+where name like '% % %'
+union
+select ship from outcomes
+where ship like '% % %'
